@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #9ab8f8;
+}
+
+.picture {
+  background-image: url(ajy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 430px;
+}
+
+.title {
+  font-family: Noto, sans-serif;
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 1px #957dad, 1px 2px 1px #957dad, 1px 3px 1px #957dad,
+    1px 4px 1px #957dad, 1px 5px 1px #957dad, 1px 6px 1px #957dad,
+    1px 10px 5px rgba(16, 16, 16, 0.5), 1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3), 1px 25px 50px rgba(16, 16, 16, 0.2);
+  padding-top: 100px;
+  margin-bottom: 100px;
+  color: rgb(0, 0, 0);
+  &_auth {
+    margin-top: 0px;
+  }
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__auth {
+  width: 215px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Noto, sans-serif;
+  text-align: center;
+  border-radius: 10px;
+}
+.button {
+  width: 215px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: Noto, sans-serif;
+  color: aliceblue;
+  background-color: #69378e;
+  border: 2px solid azure;
+  border-radius: 10px;
+  transition: all 0.5s ease-out;
+}
+
+.button:hover,
+.button:focus {
+  background-color: darkblue;
+  color: aliceblue;
+  border: 2px solid azure;
+}
+
+.lobby__list {
+  font-size: 36px;
+  font-weight: 500;
+  font-family: Noto, sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  padding-top: 30px;
+}
+.players {
+  padding-top: 30px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: Noto, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  list-style-type: "✌";
+  padding-inline-start: 10px;
+}
+.subtitle {
+  font-family: Noto, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  color: darkblue;
+}
+.move {
+  &__enemy {
+    font-family: Noto, sans-serif;
+    font-size: 24;
+    font-weight: 600;
+    text-shadow: 1px 1px #957dad, 1px 2px 1px aliceblue;
+  }
+}
+.final__image {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
+.button__rock {
+  padding-left: 35px;
+  position: relative;
+}
+.button__rock::before {
+  background-color: #69378e;
+  background-image: url(icons8-hand-rock-skin-type-1-48.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: "";
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -20px;
+  transition: all 0.5s ease-out;
+}
+.button__rock:hover::before,
+.button__rock:focus::before {
+  background-color: darkblue;
+}
+.button__scissors:hover::before,
+.button__scissors:focus::before {
+  background-color: darkblue;
+}
+.button__paper:hover::before,
+.button__paper:focus::before {
+  background-color: darkblue;
+}
+.button__scissors {
+  padding-left: 35px;
+  position: relative;
+}
+.button__scissors::before {
+  background-color: #69378e;
+  background-image: url(icons8-hand-scissors-skin-type-1-48.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: "";
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -20px;
+  transition: all 0.5s ease-out;
+}
+.button__paper {
+  padding-left: 35px;
+  position: relative;
+}
+.button__paper::before {
+  background-color: #69378e;
+  background-image: url(icons8-stop-gesture-skin-type-1-48.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: "";
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -20px;
+  transition: all 0.5s ease-out;
+}
+
+@font-face {
+  font-family: IstokWeb;
+  src: url(fonts/IstokWeb-Bold.ttf), url(fonts/IstokWeb-Regular.ttf);
+}
+
+@font-face {
+  font-family: Noto;
+  src: url(fonts/NotoSans-Regular.ttf), url(fonts/NotoSans-Black.ttf);
+}

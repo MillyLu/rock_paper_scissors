@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Камень, ножницы, бумага</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app"></div>
+    <script>
+      window.application = {
+        blocks: {},
+        screens: {},
+        renderScreen: {},
+        renderBlock: {},
+        timers: [],
+      };
+    </script>
+    <script src="authoscreen.js"></script>
+    <script src="lobby.js"></script>
+    <script src="waiting.js"></script>
+    <script src="move.js"></script>
+    <script src="competitor.js"></script>
+    <script src="win.js"></script>
+    <script src="lose.js"></script>
+    <script>
+      const backURL = "https://skypro-rock-scissors-paper.herokuapp.com/";
+
+      window.application.renderBlock = function renderBlock(obj, blockName) {
+        if (blockName in window.application.blocks) {
+          window.application.blocks[blockName](obj);
+        } else {
+          console.log("Такого блока не существует!");
+        }
+      };
+
+      window.application.renderScreen = function renderScreen(screenName) {
+        window.application.timers.forEach((intervalId) => {
+          clearInterval(intervalId);
+        });
+        if (screenName in window.application.screens) {
+          window.application.screens[screenName]();
+        } else {
+          console.log("Такой страницы не существует!");
+        }
+      };
+
+      let page;
+      let enemy;
+
+      window.application.renderScreen("auth");
+    </script>
+
+    <script src="src/lib/request.js"></script>
+  </body>
+</html>
